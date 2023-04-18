@@ -1,0 +1,24 @@
+<div class="formclass">
+  <form
+    class="formfields"
+    [formGroup]="loginform"
+    (ngSubmit)="loginSubmit(loginform.value)"
+  >
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        type="text
+      "
+        formControlName="email"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" />
+    </mat-form-field>
+    <br />
+    <button class="btn btn-success example-full-width">Login here</button>
+  </form>
+</div>

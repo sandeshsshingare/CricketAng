@@ -1,0 +1,46 @@
+<div class="formclass">
+  <form
+    class="formfields"
+    [formGroup]="registerform"
+    (ngSubmit)="registerSubmit(registerform.value)"
+  >
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Full Name</mat-label>
+      <input
+        matInput
+        type="text
+      "
+        formControlName="fullName"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field appearance="outline" class="example-full-width">
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="category">
+        <mat-option *ngFor="let category of category" [value]="category.value">
+          {{ category.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br />
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Jersy Number</mat-label>
+      <input matInput type="number" formControlName="jersy" />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" />
+    </mat-form-field>
+    <br />
+    <button class="btn btn-success example-full-width">Register</button>
+  </form>
+</div>

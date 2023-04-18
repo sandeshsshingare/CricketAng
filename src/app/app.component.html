@@ -1,0 +1,27 @@
+<button
+  routerLink="home/login"
+  *ngIf="!this.isLogin"
+  (click)="isLoginfun()"
+  class="btn btn-danger"
+>
+  Login
+</button>
+<button routerLink="home/login" class="btn btn-danger" (click)="isLogoutfun()">
+  Logout
+</button>
+<!-- {{ isLogin }} -->
+<button routerLink="home/register" color="accent" class="btn btn-success">
+  Register
+</button>
+
+<button mat-raised-button color="primary" routerLink="auth/authhome">
+  Auth Home
+</button>
+<button mat-raised-button color="primary" routerLink="auth/playerlist">
+  Player List
+</button>
+<button mat-raised-button color="primary" routerLink="auth/profile">
+  Profile
+</button>
+
+<router-outlet></router-outlet>
